@@ -48,8 +48,8 @@ calcularPromedio = function (p1, p2, p3) {
 }
 calcular = function () {
     let nota1 = recuperarFloat("txtNota1");
-    let nota2 = recuperarFloat("txtNota1");
-    let nota3 = recuperarFloat("txtNota1");
+    let nota2 = recuperarFloat("txtNota2");
+    let nota3 = recuperarFloat("txtNota3");
     let total = calcularTotal(nota1, nota2, nota3);
     mostrarTexto("lblTotal", "Total: " + total);
     let promedio = calcularPromedio(nota1, nota2, nota3)
@@ -60,8 +60,8 @@ guardar = function () {
     let nombre = recuperarTexto("txtNombre");
     let apellido = recuperarTexto("txtApellido");
     let nota1 = recuperarFloat("txtNota1");
-    let nota2 = recuperarFloat("txtNota1");
-    let nota3 = recuperarFloat("txtNota1");
+    let nota2 = recuperarFloat("txtNota2");
+    let nota3 = recuperarFloat("txtNota3");
     let total = calcularTotal(nota1, nota2, nota3);
     let promedio = calcularPromedio(nota1, nota2, nota3)
     let estudiante = {};
@@ -97,17 +97,17 @@ cargarTabla = function () {
             "<td>" + elementoEstudiante.total + "</td>" +
             "<td>" + elementoEstudiante.promedio + "</td></tr>"
     }
-    contenidoTabla+="</table>"
-    cmpTabla.innerHTML=contenidoTabla;
+    contenidoTabla += "</table>"
+    cmpTabla.innerHTML = contenidoTabla;
 
     deshabilitarComponente("btnGuardar")
 }
-limpiarCampos= function(){
-    mostrarTextoEnCaja("txtNombre","");
-     mostrarTextoEnCaja("txtApellido","");
-    mostrarTextoEnCaja("txtNota1","");
-    mostrarTextoEnCaja("txtNota2","");
-    mostrarTextoEnCaja("txtNota3","");
+limpiarCampos = function () {
+    mostrarTextoEnCaja("txtNombre", "");
+    mostrarTextoEnCaja("txtApellido", "");
+    mostrarTextoEnCaja("txtNota1", "");
+    mostrarTextoEnCaja("txtNota2", "");
+    mostrarTextoEnCaja("txtNota3", "");
     mostrarTexto("lblTotal", "");
     mostrarTexto("lblPromedio", "");
 }
