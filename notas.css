@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #dddddd; /* Color de fondo general */
+    background-color: #dddddd; 
     display: flex;
     justify-content: center;
     align-items: center;
